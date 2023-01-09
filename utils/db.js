@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
-mongoose.connect("mongodb://127.0.0.1:27017/ContactsAPP", {
+const uri = "mongodb+srv://AxelCode:<password>@cluster0.sjievuu.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
