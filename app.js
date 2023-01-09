@@ -181,8 +181,10 @@ app.get("/contact/:nama", async (req, res) => {
   })
 })
 
-connectDB().then(() => {
-    app.listen(port, () => {
+client.connect(err => {
+    if(err){ console.error(err); return false;}
+    // connection to mongo is successful, listen for requests
+    app.listen(PORT, () => {
         console.log("listening for requests");
     })
-})
+});
