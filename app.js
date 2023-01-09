@@ -14,7 +14,7 @@ const { deleteModel } = require("mongoose")
 const { deleteOne, updateOne, findOne } = require("./model/contact")
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.use(methodOverride("_method"))
 
