@@ -181,6 +181,8 @@ app.get("/contact/:nama", async (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Server is listening at http://localhost:${port}`)
+connectDB().then(() => {
+    app.listen(port, () => {
+        console.log("listening for requests");
+    })
 })
